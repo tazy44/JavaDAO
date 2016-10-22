@@ -26,12 +26,12 @@ public class Dao implements DaoAbstract {
             psmt.setString(4, product.getProductionDate());
             psmt.setString(5, product.getExpiryDate());
             int i = psmt.executeUpdate();
-            if (i > 0) {
-                JOptionPane.showMessageDialog(null, "Product was successfully added");
-            }
-            else {
-                JOptionPane.showMessageDialog(null, "Product was not added");
-            }
+//            if (i > 0) {
+//                JOptionPane.showMessageDialog(null, "Product was successfully added");
+//            }
+//            else {
+//                JOptionPane.showMessageDialog(null, "Product was not added");
+//            }
         }
         catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
@@ -48,12 +48,12 @@ public class Dao implements DaoAbstract {
             psmt.setString(4, product.getExpiryDate());
             psmt.setInt(5, product.getId());
             int i = psmt.executeUpdate();
-            if (i > 0) {
-                JOptionPane.showMessageDialog(null, "Product was successfully updated");
-            }
-            else {
-                JOptionPane.showMessageDialog(null, "Product was not updated");
-            }
+//            if (i > 0) {
+//                JOptionPane.showMessageDialog(null, "Product was successfully updated");
+//            }
+//            else {
+//                JOptionPane.showMessageDialog(null, "Product was not updated");
+//            }
         }
         catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
@@ -65,12 +65,12 @@ public class Dao implements DaoAbstract {
             PreparedStatement psmt = myconn.prepareStatement("DELETE FROM `store`.`product` WHERE `product`.`Product_ID` = ?");
             psmt.setInt(1, id);
             int i = psmt.executeUpdate();
-            if (i > 0) {
-                JOptionPane.showMessageDialog(null, "Product was successfully deleted");
-            }
-            else {
-                JOptionPane.showMessageDialog(null, "Product was not deleted");
-            }
+//            if (i > 0) {
+//                JOptionPane.showMessageDialog(null, "Product was successfully deleted");
+//            }
+//            else {
+//                JOptionPane.showMessageDialog(null, "Product was not deleted");
+//            }
         }
         catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
